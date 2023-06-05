@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import batman from 'public/imgs/batman-feo.jpg';
+import oficina from 'public/imgs/oficina.jpg';
 
 type Props = {}
 
@@ -26,19 +26,18 @@ export default function About({ }: Props) {
           x: 0
         }}
         viewport={{ once: true }}
-        src={batman.src}
+        src={oficina.src}
         className=' -mb-4 md:mb-0 sm:mt-10 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[300px] xl:h-[400px]'
       />
 
       <div className='space-y-10 px-0 md:px-10'>
         <h4 className='text-3xl font-semibold'>
           Here is a {" "}
-          <span className='underline decoration-[#F7AB0A]/50'>little</span>
+          <span className='underline decoration-[#0af3ff]/50'>little</span>
           {" "} me
         </h4>
-        <p className='text-sm'>
-        Desarrollador Web Front End con énfasis en ReactJs | JAVASCRIPT | HTML5 | CSS3 | JQUERY | MUI | Tailwind CSS | Boostrap | Git y GitHub | Tambien con conocimentos en Back End en lenguajes como Spring Boot | Java | Python | Bases de datos como SQL | MongoDb | Tambien un poco de Dooker
-        </p>
+        <p className='text-lg'>
+          Passionate about technology, programming and innovation. Always motivated to learn every day. Since I started until today I have worked with several technologies and languages, but in which I have more experience are React, .Net and SQL. I love to meet people with the same passions, with whom I can share knowledge and constantly evolve.        </p>
       </div>
 
     </motion.div>

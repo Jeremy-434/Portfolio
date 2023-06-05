@@ -18,6 +18,8 @@ export default function WorkExperience({ }: Props) {
         <ExperienceCard title={ 'Student' } />
         <ExperienceCard title={ 'Student' } />
         <ExperienceCard title={ 'Student' } />
+        <ExperienceCard title={ 'Student' } />
+        <ExperienceCard title={ 'Student' } />
       </div>
     </motion.div>
   )

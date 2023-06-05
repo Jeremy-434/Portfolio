@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
-import batman from 'public/imgs/batman-feo.jpg';
+import oficina from 'public/imgs/oficina.jpg';
 
 type Props = {}
 
@@ -23,7 +23,7 @@ export default function Hero({ }: Props) {
       <BackgroundCircles />
       <img
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={batman.src}
+        src={oficina.src}
         alt="Jeremy Mejia"
         title='Jeremy Mejia' />
       <div className='z-20'>
@@ -32,7 +32,8 @@ export default function Hero({ }: Props) {
         </h2>
         <h1 className='text-3xl lg:text-6xl font-semibold px-10'>
           <span>{text}</span>
-          <Cursor cursorColor='#F7AB0A' />
+          {/* <Cursor cursorColor='#0af3ff' /> */}
+          <Cursor cursorColor='#0af3ff' />
         </h1>
 
         <div className='pt-5'>
