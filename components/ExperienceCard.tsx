@@ -7,7 +7,7 @@ type Props = { title: String }
 
 export default function ExperienceCard({ title }: Props) {
     return (
-        <article className='flex flex-col rounded.lg items-center space-y-5 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[400px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+        <article className='flex flex-col rounded.lg items-center space-y-5 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
             <motion.img
                 initial={{
                     y: -100,
@@ -16,8 +16,10 @@ export default function ExperienceCard({ title }: Props) {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='rounded-full w-28 h-28 xl:w-[100px] xl:h-[100px] object-cover object-center'
-                src={oficina.src}
+                className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
+                // src={oficina.src}
+                // src={js.src}
+                src="https://cdn.sanity.io/images/ltuexkre/production/050ee674d199aa8d254af2b5ea480d3dc320cbb1-1240x1440.png"
                 alt=""
             />
             <div className='px-0 md:px-10'>
