@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import oficina from 'public/imgs/oficina.jpg';
-import js from 'public/imgs/icons/js.png';
+import cartoonDeveloper from '../public/imgs/mistic-first-porfolio-img.jpg';
 
 type Props = { title: String }
 
@@ -17,9 +16,7 @@ export default function ExperienceCard({ title }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
-                // src={oficina.src}
-                // src={js.src}
-                src="https://cdn.sanity.io/images/ltuexkre/production/050ee674d199aa8d254af2b5ea480d3dc320cbb1-1240x1440.png"
+                src={cartoonDeveloper.src}
                 alt=""
             />
             <div className='px-0 md:px-10'>
