@@ -1,10 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import oficina from 'public/imgs/oficina.jpg';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo;
+}
 
-export default function About({ }: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,7 +30,8 @@ export default function About({ }: Props) {
           x: 0
         }}
         viewport={{ once: true }}
-        src={oficina.src}
+        src={urlFor(pageInfo?.profilePic).url()}
+        title="Image created with IA"
         className=' -mb-4 md:mb-0 sm:mt-10 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[300px] xl:h-[400px]'
       />
 
@@ -36,8 +41,7 @@ export default function About({ }: Props) {
           <span className='underline decoration-[#0af3ff]/50'>little</span>
           {" "} me
         </h4>
-        <p className='text-lg'>
-          Passionate about technology, programming and innovation. Always motivated to learn every day. Since I started until today I have worked with several technologies and languages, but in which I have more experience are React, .Net and SQL. I love to meet people with the same passions, with whom I can share knowledge and constantly evolve.        </p>
+        <p className='text-lg'>{pageInfo?.backgroundInformation}</p>
       </div>
 
     </motion.div>
