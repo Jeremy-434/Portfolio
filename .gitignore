@@ -13,6 +13,7 @@
 /out/
 
 sanity/node_modules
+/sanity
 
 # production
 /build
