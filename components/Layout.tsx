@@ -1,21 +1,22 @@
-import Head from 'next/head';
-import { PageInfo } from '../typings';
+import Head from 'next/head'
 
 type Props = {
-    children: React.ReactNode;
-    pageInfo: PageInfo;
+  children: React.ReactNode
 }
 
-const Layout = ({ children, pageInfo }: Props) => {
-    return (
-        <>
-            <Head>
-                <title >{pageInfo?.name} Portfolio</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            {children}
-        </>
-    )
+const Layout = ({ children }: Props) => {
+  return (
+    <>
+      <Head>
+        <title>My Sanity App</title>
+      </Head>
+      <html>
+        <body>
+          {children}
+        </body>
+      </html>
+    </>
+  )
 }
 
 export default Layout
