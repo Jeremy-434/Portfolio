@@ -17,6 +17,7 @@ import { fetchSkills } from '../utils/fetchSkills';
 import { fetchProjects } from '../utils/fetchProjects';
 import { fetchSocials } from '../utils/fetchSocials';
 import { urlFor } from '../sanity';
+import Layout from '../components/Layout';
 
 type Props = {
   pageInfo: PageInfo;
@@ -28,50 +29,48 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0af3ff]/80' >
-      <Head>
-        <title >{pageInfo?.name} Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout pageInfo={pageInfo}>
+      <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0af3ff]/80' >
 
-      <Header socials={socials} />
+        <Header socials={socials} />
 
-      <section id='hero' className='snap-start'>
-        <Hero pageInfo={pageInfo} />
-      </section>
+        <section id='hero' className='snap-start'>
+          <Hero pageInfo={pageInfo} />
+        </section>
 
-      <section id='about' className='snap-center'>
-        <About pageInfo={pageInfo} />
-      </section>
+        <section id='about' className='snap-center'>
+          <About pageInfo={pageInfo} />
+        </section>
 
-      <section id='experience' className='snap-center'>
-        <WorkExperience experiences={experiences} />
-      </section>
+        <section id='experience' className='snap-center'>
+          <WorkExperience experiences={experiences} />
+        </section>
 
-      <section id='skills' className='snap-start'>
-        <Skills skills={skills} />
-      </section>
+        <section id='skills' className='snap-start'>
+          <Skills skills={skills} />
+        </section>
 
-      <section id='projects' className='snap-start' >
-        <Projects projects={projects} />
-      </section>
+        <section id='projects' className='snap-start' >
+          <Projects projects={projects} />
+        </section>
 
-      <section id='contact' className='snap-start'>
-        <ContactMe />
-      </section>
+        <section id='contact' className='snap-start'>
+          <ContactMe />
+        </section>
 
-      <Link href="#hero">
-        <footer className='sticky bottom-5 w-full cursor-pointer'>
-          <div className='flex items-center justify-center'>
-            <img
-              className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
-              src={urlFor(pageInfo?.heroImage).url()}
-              alt={"home"}
-            />
-          </div>
-        </footer>
-      </Link>
-    </div>
+        <Link href="#hero">
+          <footer className='sticky bottom-5 w-full cursor-pointer'>
+            <div className='flex items-center justify-center'>
+              <img
+                className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+                src={urlFor(pageInfo?.heroImage).url()}
+                alt={"home"}
+              />
+            </div>
+          </footer>
+        </Link>
+      </div>
+    </Layout>
   );
 };
 

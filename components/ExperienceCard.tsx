@@ -26,14 +26,15 @@ export default function ExperienceCard({ experience }: Props) {
                 <h4 className='text-2xl font-light'>{experience?.jobTitle}</h4>
                 <p className='font-bold text-xl mt-1'>{experience?.company}</p>
                 <div className='flex space-x-2 my-2'>
-                    {experience?.technologies.map(technology => (
+                    {/* //! These technologies contain nothing */}
+                    {/* {experience?.technologies.map(technology => (
                         <img
                             key={technology._id}
                             className='h-6 w-6 rounded-full'
                             src={technology?.image && urlFor(technology.image).url()}
                             alt={technology?.title}
                         />
-                    ))}
+                    ))} */}
                 </div>
                 <p className='uppercase py-2 text-gray-300'>
                     {new Date(experience?.dateStarted).toDateString()} - {new Date(experience?.dateEnded).toDateString()}

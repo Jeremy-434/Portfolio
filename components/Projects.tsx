@@ -44,14 +44,15 @@ const Projects = ({ projects }: Props) => {
                             </h4>
 
                             <div className='flex items-center space-x-2 justify-center'>
-                                {project?.technologies.map(technology => (
+                                {/* //! These technologies contain nothing */}
+                                {/* {project?.technologies.map(technology => (
                                     <img
                                         className='w-10 h-10'
                                         key={technology?._id}
                                         src={technology?.image && urlFor(technology.image).url()}
                                         alt={technology?.title}
                                     />
-                                ))}
+                                ))} */}
                             </div>
 
                             <p className='text-lg text-center md:text-left'>
