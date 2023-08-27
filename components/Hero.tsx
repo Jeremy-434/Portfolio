@@ -1,35 +1,38 @@
-import React from 'react';
-import Link from 'next/link';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import BackgroundCircles from './BackgroundCircles';
-import oficina from 'public/imgs/oficina.jpg';
-import { PageInfo } from '../typings';
-import { urlFor } from '../sanity';
+import React from 'react'
+import Link from 'next/link'
+import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import BackgroundCircles from './BackgroundCircles'
+// import oficina from 'public/imgs/oficina.jpg'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
+import Image from 'next/image'
 
 type Props = {
   pageInfo: PageInfo;
 }
 
-export default function Hero({ pageInfo }: Props) {
-
-  const [text, count] = useTypewriter({
+export default function Hero ({ pageInfo }: Props) {
+  const [text] = useTypewriter({
     words: [
       `Hi, The Name's ${pageInfo?.name}`,
-      "Guy-who-loves-anime.tsx",
-      "<ButLovesToLearnMore />"
+      'Guy-who-loves-anime.tsx',
+      '<ButLovesToLearnMore />'
     ],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 2000
   })
 
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
-      <img
+      <Image
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
         src={urlFor(pageInfo?.heroImage).url()}
-        alt="Developer and your dragon pet"
-        title='Image created with IA' />
+        alt='Developer and your dragon pet'
+        title='Image created with IA'
+        width={128}
+        height={128}
+      />
       <div className='z-20'>
         <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
           {pageInfo?.role}
@@ -41,16 +44,16 @@ export default function Hero({ pageInfo }: Props) {
         </h1>
 
         <div className='pt-5'>
-          <Link href="#about">
+          <Link href='#about'>
             <button className='heroButton'>About</button>
           </Link>
-          <Link href="#experience">
+          <Link href='#experience'>
             <button className='heroButton'>Experience</button>
           </Link>
-          <Link href="#skills">
+          <Link href='#skills'>
             <button className='heroButton'>Skills</button>
           </Link>
-          <Link href="#projects">
+          <Link href='#projects'>
             <button className='heroButton'>Projects</button>
           </Link>
         </div>

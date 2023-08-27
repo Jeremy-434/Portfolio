@@ -6,12 +6,12 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'jobTitle', 
+      name: 'jobTitle',
       title: 'JobTitle',
       type: 'string',
     }),
     defineField({
-      name: 'companyImage', 
+      name: 'companyImage',
       title: 'CompanyImage',
       type: 'image',
       options: {
@@ -19,7 +19,7 @@ export default defineType({
       }
     }),
     defineField({
-      name: 'company', 
+      name: 'company',
       title: 'Company',
       type: 'text',
     }),

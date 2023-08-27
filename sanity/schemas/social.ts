@@ -12,7 +12,7 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'url', 
+      name: 'url',
       title: 'Url',
       type: 'url',
     }),

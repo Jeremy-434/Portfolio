@@ -12,7 +12,7 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'image', 
+      name: 'image',
       title: 'Image',
       type: 'image',
       options: {
@@ -20,7 +20,7 @@ export default defineType({
       }
     }),
     defineField({
-      name: 'summary', 
+      name: 'summary',
       title: 'Summary',
       type: 'text',
     }),
