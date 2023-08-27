@@ -9,15 +9,16 @@
  * https://github.com/sanity-io/next-sanity
  */
 
-import { NextStudio, NextStudioProps } from 'next-sanity/studio';
-import Layout from '../../../../components/Layout';
+import { NextStudio } from 'next-sanity/studio';
+import { Container } from '@sanity/ui';
 import config from '../../../../sanity.config';
 
 export default function StudioPage() {
-  const props: NextStudioProps = { config };
   return (
-    <Layout>
-      <NextStudio {...props} />
-    </Layout>
+    <Container>
+      <NextStudio config={config} />
+    </Container>
   );
 }
+
+
