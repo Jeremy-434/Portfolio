@@ -10,7 +10,7 @@ const query = groq`
 `
 
 type Data = {
-    socials: Social[]
+  socials: Social[]
 }
 
 export default async function handler (

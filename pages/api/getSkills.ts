@@ -10,7 +10,7 @@ const query = groq`
 `
 
 type Data = {
-    skills: Skill[]
+  skills: Skill[]
 }
 
 export default async function handler (
