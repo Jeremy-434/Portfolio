@@ -32,12 +32,13 @@ export interface Technology extends SanityBody {
     title: string;
 }
 
+type date = any
 export interface Experience extends SanityBody {
     _type: 'experience';
     company: string;
     companyImage: Image;
-    dateStarted: Date;
-    dateEnded: Date;
+    dateStarted: date;
+    dateEnded: date;
     isCurrentlyWorkingHere: boolean;
     jobTitle: string;
     points: string[];
