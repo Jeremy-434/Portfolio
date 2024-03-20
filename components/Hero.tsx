@@ -27,7 +27,7 @@ export default function Hero ({ pageInfo }: Props) {
       <BackgroundCircles />
       <Image
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={urlFor(pageInfo?.heroImage).url()}
+        src={pageInfo?.heroImage && urlFor(pageInfo.heroImage).url() ? urlFor(pageInfo.heroImage).url() : ''}
         alt='Developer and your dragon pet'
         title='Image created with IA'
         width={128}

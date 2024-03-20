@@ -31,7 +31,7 @@ export default function About ({ pageInfo }: Props) {
           x: 0
         }}
         viewport={{ once: true }}
-        src={urlFor(pageInfo?.profilePic).url()}
+        src={pageInfo?.profilePic && urlFor(pageInfo.profilePic).url() ? urlFor(pageInfo.profilePic).url() : ''}
         title='Image created with IA'
         className=' -mb-4 md:mb-0 sm:mt-10 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[300px] xl:h-[400px]'
       />
