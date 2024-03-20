@@ -1,4 +1,4 @@
-// import type { GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 import About from '../components/About'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -9,11 +9,11 @@ import ContactMe from '../components/ContactMe'
 import Link from 'next/link'
 
 import { Experience, PageInfo, Project, Skill, Social } from '../typings'
-// import { fetchPageInfo } from '../utils/fetchPageInfo'
-// import { fetchExperiences } from '../utils/fetchExperiences'
-// import { fetchSkills } from '../utils/fetchSkills'
-// import { fetchProjects } from '../utils/fetchProjects'
-// import { fetchSocials } from '../utils/fetchSocials'
+import { fetchPageInfo } from '../utils/fetchPageInfo'
+import { fetchExperiences } from '../utils/fetchExperiences'
+import { fetchSkills } from '../utils/fetchSkills'
+import { fetchProjects } from '../utils/fetchProjects'
+import { fetchSocials } from '../utils/fetchSocials'
 import { urlFor } from '../sanity'
 import Image from 'next/image'
 
@@ -74,24 +74,24 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 
 export default Home
 
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//   const pageInfo: PageInfo = await fetchPageInfo()
-//   const experiences: Experience[] = await fetchExperiences()
-//   const skills: Skill[] = await fetchSkills()
-//   const projects: Project[] = await fetchProjects()
-//   const socials: Social[] = await fetchSocials()
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo()
+  const experiences: Experience[] = await fetchExperiences()
+  const skills: Skill[] = await fetchSkills()
+  const projects: Project[] = await fetchProjects()
+  const socials: Social[] = await fetchSocials()
 
-//   return {
-//     props: {
-//       pageInfo,
-//       experiences,
-//       skills,
-//       projects,
-//       socials
-//     },
-//     // Next.js will attempt to re-generate the page:
-//     // - When a request comes in
-//     // — At most once every 10 seconds
-//     revalidate: 10
-//   }
-// }
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // — At most once every 10 seconds
+    revalidate: 10
+  }
+}
