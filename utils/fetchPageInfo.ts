@@ -8,6 +8,7 @@ export const fetchPageInfo = async () => {
   console.log('🚀 ~ NEXT_PUBLIC_BASE_URL:', process.env.NEXT_PUBLIC_BASE_URL)
   console.log('🚀 ~ VERCEL_URL:', process.env.VERCEL_URL)
   if (!res.ok) {
+    console.log('🚀 ~ res.status:', res.status)
     throw new Error(`HTTP error! status: ${res.status}`)
   } else {
     const data = await res.json()
